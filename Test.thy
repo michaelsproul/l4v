@@ -201,6 +201,23 @@ lemma inner_syntax_wrap:
                            else x"])
   by clarsimp
 
+lemma lname:
+  "\<lbrakk> P x ; P x \<Longrightarrow> Q x \<rbrakk>
+   \<Longrightarrow> Q x"
+proof -
+  fix x
+  obtain y where "y
+       = x"
+  and "y
+= x"
+    sorry
+qed
+
+lemma lname:
+  "\<lbrakk> P x ; P x \<Longrightarrow> Q x \<rbrakk>
+   \<Longrightarrow> Q x"
+proof -
+
 (* Future work: making subgoal great again *)
 lemma subgoal_magic:
   "thing1 x y + thing2 x y = 2 * (thing2 x y) + thing3 x y"
